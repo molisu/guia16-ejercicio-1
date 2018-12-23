@@ -1,14 +1,13 @@
 package cl.accenture.programatufuturo.ejemplo.model;
 
+    //Clase Cancion
 public class Cancion {
 
+    // Con sus atributos
     private int idCancion, duracion;
     private String nombre, autor, genero;
 
-    public Cancion() {
-        this.
-    }
-
+    // Constructor con parametros
     public Cancion(int idCancion, int duracion, String nombre, String autor, String genero) {
         this.idCancion = idCancion;
         this.duracion = duracion;
@@ -17,6 +16,7 @@ public class Cancion {
         this.genero = genero;
     }
 
+    // Getters y Setters para mostrar y modificar según sea necesario en la clase DAO
     public int getIdCancion() {
         return idCancion;
     }
@@ -57,10 +57,12 @@ public class Cancion {
         this.genero = genero;
     }
 
+    // Método equals editado para comparar 2 canciones de la Class Cancion
+    // según su id
     public boolean equals(Object o) {
         if(o instanceof Cancion) {
             Cancion cancioncita = (Cancion) o;
-            return this.getIdCancion() == cancioncita.getIdCancion();
+            return this.getIdCancion() == cancioncita.getIdCancion(); // Como es int se compara con ==
         }
         return false;
     }

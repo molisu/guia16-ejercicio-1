@@ -4,11 +4,15 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+
+// Mi clase Conexion
 public class Conexion {
 
+    // Los atributos para poder generar una conexion
     private String driver, host, database, user, password;
     private int puerto;
 
+    // Constructor con parametros
     public Conexion(String driver, String host, String database, String user, String password, int puerto) {
         this.driver = driver;
         this.host = host;
@@ -18,9 +22,14 @@ public class Conexion {
         this.puerto = puerto;
     }
 
+    // en el get hago el metodo para realizar mi conexion
     public Connection getConexion() {
+        
+        // creo una conexion de tipo Connection, que sea nula.
         Connection conexion = null;
         try {
+
+            // Aquí no sé que rayos hice pero así se inicia la conexion :3
             Class.forName(this.driver);
             System.out.println("Miau");
 
